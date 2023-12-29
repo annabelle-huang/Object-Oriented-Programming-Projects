@@ -1,0 +1,2 @@
+class BadSpace(Exception):
+    pass

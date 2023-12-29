@@ -1,0 +1,10 @@
+﻿I liked how we were able to help each other with areas of knowledge we didn’t understand. The process of writing code was much easier as well since I have a partner to discuss my ideas with. I learned a lot from my partner and he gave out many good ideas to implement in our code, saving us from redundancy.
+
+
+The assignment helped me understand design patterns more concretely by making me utilize the patterns in parts of the code. I had to think about how to use the iterator pattern in the code. After thinking about using it for traversing the entire board like a double for loop and various other traversal methods, I decided the most useful thing was to iterate around each board space in a circle. 
+
+
+I thought the memento design pattern was the most interesting, since I never thought of storing an object's previous states in a list before to keep track of movements. This made ‘undo’ and ‘redo’ much easier to work with. 
+
+
+Overall, this was a successful learning experience and I enjoyed working with my partner.

@@ -1,0 +1,17 @@
+﻿We chose to implement the Iterator, Memento, Strategy, and Template Method design patterns. 
+
+
+Iterator:
+It was pretty clear from the beginning of planning out this project that we would need to make use of the iterator design pattern. It wasn’t super obvious how we should do so though. Given the board’s structure as a multidimensional array of Space objects, there were several possibilities. After discussing it, we realized that the main need for an iterator over the board would be for checking the adjacent spaces of a center space, to do things like enumerating possible moves for the computer players or checking if a worker can move for the human players. As such, we chose an iterator that implemented this, with each next call going around the circle of adjacent spaces. 
+
+
+Memento:
+This was the most obvious need for our design, as the need to be able to undo/redo moves as many times as needed clearly necessitates an object that can manage all of these previous states. As such, implementing this design pattern was a no-brainer and didn’t require as much creativity or thought as we spent in implementing the others. We more or less just implemented a standard memento design.
+
+
+Strategy:
+Given the need for this project to have both computer and human players, we thought about how we should design the player classes to accommodate this need. On one hand, we could just implement different classes for any type of player choosing their moves in any way. But really, these player classes would be sharing everything except for how they would choose their moves. They would have the same attributes and methods except for the one choice method would be implemented differently. This led us to the idea that implementing the Strategy design pattern would be perfect. We could implement one player class, and just give each player some instance of a strategy object that could pick their move however the strategy object dictates. As such, we were able to keep all types of players within one player class, and just implemented a Strategy interface that allows the easy integration of whatever strategies that are implemented.
+
+
+Template Method:
+Given the above use of the Strategy design pattern, we noticed that among the 3 types of players that could be chosen from, there were 2 main groups: human and computer players. The human players had a completely unique strategy involving gathering input from the CLI. However, the computer players had a pretty similar algorithm for making their move: enumerate all the moves, pick one (through varying methods), enact the move, then return a summary of the move that was made. As such, we decided that we could use the Template Method design pattern to implement the computer player move choice algorithm, and just allow subclasses to implement the “pick one” method as they liked. This way we could keep common code all in one place, as well as allow the implementation of more computer player strategies without lots of repetition. All one would have to do is create a new class inheriting from this parent that implements the “pick one” function.

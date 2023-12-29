@@ -1,0 +1,13 @@
+﻿ftm3
+
+
+I think the biggest takeaway I have from this assignment is how well the process went after we sat down and planned things out before starting to code. We talked about what sort of classes we wanted, a general idea of the relationships between these classes, and what design patterns might be useful. 
+
+
+We tried to avoid splitting the work as much as possible, instead working on the same thing at the same time, making sure that we knew everything the other was doing to the point that we could debug each other’s code. Often I would finish some part and my partner would know it well enough to not only test what I had done and understand what was going wrong, but knew our design well enough that they could fix the issue.
+
+
+As an individual I think I learned a lot about not only using design patterns, but also doing so creatively. Often they can be obvious like how the Memento pattern was an obvious choice to implement undo/redo, but sometimes thinking out of the box can allow you to come up with creatively simple designs, such as how we combined the Strategy and Template Method design patterns to implement the player class. 
+
+
+And I also learned a lot about how implementing these design patterns aren’t just to make the development process easier, but also allow for the easy addition of later features. If we wanted to add more types of computer players, this can now easily be done with our Strategy and Template Method design patterns. All that would have to be done is the creation of an extension of our template method that implements the pick_one() method.
